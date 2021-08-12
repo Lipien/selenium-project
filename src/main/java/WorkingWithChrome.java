@@ -1,8 +1,8 @@
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WorkingWithChrome {
-    ChromeDriver  driver;
-    String url ="http://demo.guru99.com/v4";
+    ChromeDriver driver;
+    String url = "http://demo.guru99.com/v4";
 
     public void invokeBrowser() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -25,6 +25,7 @@ public class WorkingWithChrome {
         driver.quit();
 
     }
+
     public static void main(String[] args) {
 
         WorkingWithChrome wc = new WorkingWithChrome();
