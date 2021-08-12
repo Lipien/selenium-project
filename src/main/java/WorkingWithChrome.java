@@ -5,7 +5,7 @@ public class WorkingWithChrome {
     String url ="http://demo.guru99.com/v4";
 
     public void invokeBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Selenium-drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 
         driver = new ChromeDriver();
 

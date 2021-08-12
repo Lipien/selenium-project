@@ -12,7 +12,7 @@ public class Guru99ApplicationTest {
     @BeforeMethod
     public void invokeBrowser() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Selenium-drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
