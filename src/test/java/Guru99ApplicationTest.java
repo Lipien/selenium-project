@@ -1,3 +1,5 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -20,7 +22,7 @@ public class Guru99ApplicationTest {
         driver.get(url);
     }
 
-    @Test
+    @Test (priority = 0)
     public void verifyTitleOfThePage() {
 
         String expectedTitle = "Guru99 Bank Home Page";
@@ -28,5 +30,21 @@ public class Guru99ApplicationTest {
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle, expectedTitle);
+    }
+
+    @Test (priority = 100)
+    public void verifyLoginToGuru99Application(){
+
+        WebElement userId = driver.findElement(By.name("uid"));
+
+        WebElement userPassword = driver.findElement(By.name("password"));
+
+        WebElement loginButton = driver.findElement(By.name("btnLogin"));
+
+        userId.sendKeys("mngr347495");
+
+        userPassword.sendKeys("utaregU");
+
+        loginButton.click();
     }
 }
